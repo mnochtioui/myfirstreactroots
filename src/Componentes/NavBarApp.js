@@ -25,7 +25,7 @@ const NavBarApp = ({ nameSearch, setNameSearch, rateSearch, setRateSearch }) => 
 
   return (
     <Navbar style={{ background: 'lightblue', textAlign:'left' }} expand="lg"  >
-      <Container>
+      <Container fluid >
         <Navbar.Brand style={{ color: 'red' }}>MyVideoTek</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -44,21 +44,23 @@ const NavBarApp = ({ nameSearch, setNameSearch, rateSearch, setRateSearch }) => 
               value={nameSearch}
               onChange={handleNameChange}
             />
-            
-
-          </Form>  
-          <ReactStars
+            <ReactStars 
+            className="d-flex"
               count={10}
               size={20}
               isHalf={false}
               activeColor="#ffd700"
               value={rateSearch}
               onChange={handleRateChange}
-            />    <Button type="reset" variant="outline-danger" onClick={refreshPage}>Annuler</Button>
+            />    
+            <Button variant="outline-warning" onClick={refreshPage}>Annuler</Button>
+
+          </Form>  
+          
 
         </Navbar.Collapse>
 
-      </Container>
+      </Container >
     </Navbar>
   )
 }

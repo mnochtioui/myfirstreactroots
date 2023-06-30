@@ -23,8 +23,7 @@ const Details = ({movies}) => {
             <p>{movie.description}</p>
             <hr />
              
-<iframe width="1180" height="664" src={movie.trailer} title={movie.name} frameborder="0" allow="autoplay;  encrypted-media" allowfullscreen></iframe>
-             
+<iframe width="640" height="360" src={movie.trailer} title={movie.name} frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>          
              <hr />
              <Button  variant="primary" onClick={()=>navigate("/")} >Let's Go Back</Button> 
         </div>
